@@ -1,0 +1,125 @@
+:root{
+    --bg-clr-main: #EAD1DC;
+    --bg-form:#F5F5F5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-util {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-clr-main);
+    padding: 20px;
+    color: #1A237E;
+}
+
+.content-box {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    padding: 10px;
+ 
+}
+
+.hero-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 70vh;
+}
+
+.hero-text {
+    flex: 1;
+    margin-right: 20px;
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+    flex-direction: column;
+    gap:1em;
+
+}
+
+.name{
+    align-self: flex-start;
+}
+
+.image-box {
+    flex: 1;
+    text-align: center;
+}
+
+.image-box img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 200px;
+}
+
+.contact-box {
+    background-color: var(--bg-form);
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: 50vh;
+}
+
+.contact-items{
+    display: flex;
+    gap: 1em;
+    justify-content: space-around;
+}
+
+.contact-right .contact-left{
+    width:40vw;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #46fc70;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #3eff68;
+}

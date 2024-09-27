@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Name</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="content-box">
+        <div class="title border-util">
+            <h1 class="school">School Name</h1>
+        </div>
+        <div class="hero-box border-util">
+            <div class="hero-text">
+                <h2 class="name">Name</h2>
+                <h3>Welcome message to your web page.</h3>
+                <p class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Minus enim molestiae laudantium. Minus incidunt inventore placeat, ex commodi 
+                sint pariatur alias asperiores expedita eum beatae quia dolores delectus similique enim? 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde temporibus officiis atque quos, 
+                enim excepturi nam voluptate saepe expedita, soluta delectus eveniet pariatur impedit? Nesciunt 
+                obcaecati labore veritatis sequi similique.
+                </p>
+            </div>
+            <div class="image-box border-util">
+                <img src="./assets/girl_avatar.jpg" alt="" srcset="">
+            </div>
+        </div>
+        <div class="contact-box ">
+            <h2>Contact Us</h2>
+            <form action="/submit-contact" method="POST">
+                <div class="contact-items">
+                    <div class="contact-left">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
