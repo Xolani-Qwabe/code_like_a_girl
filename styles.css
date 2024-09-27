@@ -1,9 +1,15 @@
-:root{
+:root {
     --bg-clr-main: #EAD1DC;
-    --bg-form:#F5F5F5;
-    --text-clr:#101654;
-    --bg-button:#46fc70;
-    --bg-button-hover:#169e36;
+    --bg-form: #F5F5F5;
+    --text-clr: #101654;
+    --bg-button: #46fc70;
+    --bg-button-hover: #169e36;
+
+    --padding-content: 1em;
+    --margin-bottom: 1em;
+    --padding-mobile: 2em;
+    --font-size-title: 2rem;
+    --font-size-h2: 1.5rem;
 }
 
 * {
@@ -18,32 +24,30 @@
     align-items: center;
 }
 
-
 body {
     font-family: Arial, sans-serif;
     background-color: var(--bg-clr-main);
-    padding: 20px;
+    padding: 1em;
     color: var(--text-clr);
 }
 
 .content-box {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+    max-width: 1200px;
 }
 
 .title {
     text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
-    padding: 10px;
- 
+    font-size: var(--font-size-title);
+    margin-bottom: var(--margin-bottom);
 }
 
 .hero-box {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: var(--padding-content);
+    margin-bottom: var(--margin-bottom);
     height: 70vh;
 }
 
@@ -51,15 +55,14 @@ body {
     flex: 1;
     margin-right: 20px;
     display: flex;
-    justify-content: flex-start;
-    height: 100%;
     flex-direction: column;
-    gap:1em;
-
+    gap: 1em;
+    align-items: flex-start; /* Ensures everything aligns at the start */
 }
 
-.name{
-    align-self: flex-start;
+.name {
+    align-self: flex-start; /* Aligns name at the start */
+    margin-bottom: 0.5em; /* Adds spacing below the name */
 }
 
 .image-box {
@@ -75,25 +78,27 @@ body {
 
 .contact-box {
     background-color: var(--bg-form);
-    padding: 1em;
+    padding: var(--padding-content);
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    height: 50vh;
+    margin-bottom: var(--margin-bottom);
 }
 
-.contact-items{
+.contact-items {
     display: flex;
     gap: 1em;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.contact-right .contact-left{
-    width:40vw;
+.contact-left, .contact-right {
+    width: 48%;
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: var(--margin-bottom);
+    font-size: var(--font-size-h2);
 }
 
 .form-group {
@@ -125,4 +130,42 @@ button {
 
 button:hover {
     background-color: var(--bg-button-hover);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-box {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hero-text {
+        margin-right: 0;
+    }
+
+    .image-box img {
+        max-width: 100%;
+    }
+
+    .contact-left, .contact-right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .hero-box{
+        gap: var(--padding-mobile);
+    }
 }
