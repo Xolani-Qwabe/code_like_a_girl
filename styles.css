@@ -57,12 +57,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    align-items: flex-start; /* Ensures everything aligns at the start */
+    align-items: flex-start; 
 }
 
 .name {
-    align-self: flex-start; /* Aligns name at the start */
-    margin-bottom: 0.5em; /* Adds spacing below the name */
+    align-self: flex-start; 
+    margin-bottom: 0.5em;
 }
 
 .image-box {
@@ -132,7 +132,7 @@ button:hover {
     background-color: var(--bg-button-hover);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .hero-box {
         flex-direction: column;
@@ -152,20 +152,30 @@ button:hover {
     }
 }
 
+
+
 @media (max-width: 480px) {
-    .title {
-        font-size: 1rem;
+    .hero-box {
+        flex-direction: column;
+        height: auto;
     }
 
-    h2 {
-        font-size: 1.2rem;
+    .image-box {
+        order: 1; 
     }
 
-    .hero-text p {
-        font-size: 0.9rem;
+    .hero-text {
+        order: 2; 
+        margin-right: 0;
     }
 
-    .hero-box{
-        gap: var(--padding-mobile);
+    .image-box img {
+        max-width: 100%;
+    }
+
+    .school{
+        font-size: 1em;
     }
 }
+
+
