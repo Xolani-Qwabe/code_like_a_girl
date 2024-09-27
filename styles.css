@@ -1,6 +1,9 @@
 :root{
     --bg-clr-main: #EAD1DC;
     --bg-form:#F5F5F5;
+    --text-clr:#101654;
+    --bg-button:#46fc70;
+    --bg-button-hover:#169e36;
 }
 
 * {
@@ -20,7 +23,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: var(--bg-clr-main);
     padding: 20px;
-    color: #101654;
+    color: var(--text-clr);
 }
 
 .content-box {
@@ -111,7 +114,7 @@ input, textarea {
 
 button {
     padding: 10px 15px;
-    background-color: #46fc70;
+    background-color: var(--bg-button);
     color: white;
     border: none;
     border-radius: 5px;
@@ -121,5 +124,5 @@ button {
 }
 
 button:hover {
-    background-color: #3eff68;
+    background-color: var(--bg-button-hover);
 }
